@@ -1,0 +1,119 @@
+.seal-container {
+  box-sizing: border-box;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  .seal-title {
+    position: relative;
+    margin-bottom: 10px;
+    .seal-title-text {
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+    .seal-close-btn {
+      position: absolute;
+      top: 2px;
+      right: 0px;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../assets/img/close.png');
+      background-size: 100%;
+    }
+  }
+  .seal-carousel {
+    margin-bottom: 20px;
+    .seal-carousel-container {
+      display: flex;
+      // justify-content: center;
+      overflow-x: auto;
+      .seal-carousel-i {
+        flex-shrink: 0;
+        width: 30%;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid white;
+      }
+      .seal-carousel-i-active {
+        border: 1px solid red;
+      }
+      .seal-carousel-i img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .seal-carousel-dots {
+      display: flex;
+      justify-content: center;
+      .seal-carousel-dot-i {
+        width: 10px;
+        height: 10px;
+        margin: 2px;
+        background: lightgray;
+        border-radius: 50%;
+      }
+      .seal-carousel-dot-i-active {
+        background: gray;
+      }
+    }
+  }
+  .seal-note-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .seal-input-text {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .seal-input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    line-height: 36px;
+    -webkit-text-security: disc;
+  }
+  .seal-password-container {
+    ul,
+    li {
+      list-style: none;
+    }
+    .password-ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+    }
+    .password-lable input {
+      width: 1px;
+      height: 1px;
+      border: 0;
+      opacity: 0;
+    }
+    .password-lable {
+      clear: both;
+      height: 30px;
+    }
+    .password-lable li {
+      width: 16%;
+      height: 30px;
+      margin-left: -1px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid #dedede;
+      -webkit-text-security: disc;
+    }
+  }
+  .seal-note-error {
+    padding: 10px 0px;
+    color: red;
+  }
+}
+.seal-sign-board {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+}

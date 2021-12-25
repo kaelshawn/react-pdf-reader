@@ -1,0 +1,42 @@
+{
+  "name": "isigning-open-release",
+  "version": "1.1.52",
+  "description": "",
+  "main": "./esm/index.js",
+  "module": "./esm/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.3.42:3000/web_dev/iSigning-open-release.git"
+  },
+  "dependencies": {
+    "@polka/send-type": "^0.5.2",
+    "alloyfinger": "^0.1.16",
+    "axios": "^0.21.0",
+    "blueimp-md5": "^2.18.0",
+    "core-js": "3.6.5",
+    "cropperjs": "^1.5.9",
+    "crypto-js": "^4.0.0",
+    "d3-drag": "^2.0.0",
+    "d3-selection": "^2.0.0",
+    "fingerprintjs2": "^2.1.4",
+    "isigning-signboard": "http://192.168.3.42:3000/web_dev/SignBoard/archive/v1.2.4.4.tar.gz",
+    "lodash-es": "^4.17.15",
+    "mime-types": "^2.1.27",
+    "msgpack-lite": "^0.1.26",
+    "node-rsa": "^1.1.1",
+    "ofd.js": "^0.2.5",
+    "open": "^7.3.0",
+    "pdfjs-dist": "http://192.168.3.42:3000/web_dev/iSigning-pdfjs-dist/archive/v2.5.207.tar.gz",
+    "prop-types": "^15.7.2",
+    "qrcode": "^1.4.4",
+    "qs": "^6.9.4",
+    "uuid": "^8.3.2",
+    "websocket": "^1.0.34",
+    "weixin-js-sdk": "^1.6.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

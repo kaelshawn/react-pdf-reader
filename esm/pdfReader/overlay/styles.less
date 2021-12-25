@@ -1,0 +1,146 @@
+.overlay-elem {
+  position: absolute;
+  z-index: 2;
+  box-sizing: content-box;
+  color: #000;
+  background-color: rgba(223, 96, 74, 0.1);
+  border: 1px dashed rgba(223, 96, 74, 0.6);
+  transform-origin: left top;
+  cursor: pointer;
+  &.focus,
+  &.overlay-actived,
+  &.selected,
+  &:hover {
+    background-color: rgba(223, 96, 74, 0.4);
+    border: 1px solid #ce2f13;
+  }
+  .overlay-size-hander {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border: 1px solid #ce2f13;
+    border-radius: 50%;
+    &.LEFT_TOP {
+      top: -3px;
+      left: -3px;
+      cursor: nw-resize;
+    }
+    &.RIGHT_TOP {
+      top: -3px;
+      right: -3px;
+      cursor: ne-resize;
+    }
+    &.RIGHT_BOTTOM {
+      right: -3px;
+      bottom: -3px;
+      cursor: nw-resize;
+    }
+    &.LEFT_BOTTOM {
+      bottom: -3px;
+      left: -3px;
+      cursor: ne-resize;
+    }
+  }
+  .selecte-elem {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 2;
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../../assets/img/check-box.png);
+    background-size: cover;
+  }
+  &.allow-selecte {
+    .selecte-elem {
+      display: block;
+    }
+  }
+  &.selected {
+    .selecte-elem {
+      background-image: url(../../../assets/img/check-box-selected.png);
+    }
+  }
+}
+.overlay-allow-move {
+  cursor: grab;
+}
+&.overlay-actived,
+.overlay-allow-size:hover {
+  .overlay-size-hander {
+    display: block;
+  }
+}
+
+.overlay-elem-drag {
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(223, 96, 74, 0.4);
+  border: 1px dashed rgba(223, 96, 74, 0.6);
+}
+
+.overlay-elem-input {
+  line-height: 28px;
+  textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: '微软雅黑';
+    background-color: #fff;
+    border: 0;
+    outline: none;
+    resize: none;
+  }
+  &.input {
+    textarea {
+      display: block;
+    }
+  }
+  .overlay-input-text {
+    width: calc(100% - 2px);
+    height: 100%;
+    overflow: hidden;
+    color: #000;
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: '微软雅黑';
+    }
+  }
+}
+
+.overlay-elem-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.overlay-elem-checkbox {
+  width: auto !important;
+  height: auto !important;
+  padding: 2px;
+  .icon-check {
+    color: #fff;
+    line-height: 1;
+    background-color: #000;
+  }
+  .icon-weigouxuan {
+    color: #fff;
+    line-height: 1;
+    background-color: #fff;
+  }
+}

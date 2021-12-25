@@ -1,0 +1,45 @@
+.aos-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  z-index: 99999;
+  display: flex;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: fit-content;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #edf2fc;
+  transform: translateX(-50%);
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
+  .iconfont {
+    line-height: 1;
+  }
+  .message-close {
+    padding-left: 20px;
+    color: #c0c4cc;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+.aos-message-success {
+  color: #52c41a;
+  background-color: #eef9e8;
+  border-color: #dcf3d1;
+}
+.aos-message-error {
+  color: #ff6363;
+  background-color: #ffefef;
+  border-color: #ffe0e0;
+}
+.aos-message-warn {
+  color: #ffbd69;
+  background-color: #fff8f0;
+  border-color: #fff2e1;
+}
+.aos-message-span {
+  flex-grow: 1;
+  padding-left: 10px;
+}

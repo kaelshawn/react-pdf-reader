@@ -1,0 +1,68 @@
+.aos-sign-board,
+.aos-pc-sign-board,
+.aos-sign-view-board {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #efefef;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  .bg-view {
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin-top: -60px;
+    color: rgba(0, 0, 0, 0.15);
+    font-size: 80px;
+    text-align: center;
+  }
+  .sign-view {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .listener {
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+    .tools-bar {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      width: 100%;
+      height: 60px;
+      padding: 0 10px;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .mask-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .aos-sign-board {
+    transform: rotate(90deg);
+  }
+}

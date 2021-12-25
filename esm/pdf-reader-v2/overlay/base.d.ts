@@ -1,0 +1,62 @@
+import { OverlayTypeNames } from '.';
+import PdfReader from '..';
+import EventBase from '../../utils/eventBase2';
+import { OverlayPosition } from '../overlay-manager';
+import { ORIGIN_TYPE, OverlayBaseProps } from './types';
+import { VariableMove, VariableMoveConfig } from './variable-move';
+import { VariableSize, VariableSizeConfig } from './variable-size';
+export declare type OverlayEvent = {
+    onClick: {
+        id: string;
+        type: OverlayTypeNames;
+    };
+    onValueChange: undefined;
+};
+export declare type OverlayValue = {
+    page: number;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+};
+export declare abstract class OverlayBase extends EventBase<OverlayEvent> {
+    protected x: number;
+    protected y: number;
+    protected width: number;
+    protected height: number;
+    protected required: boolean;
+    protected pdfReader: PdfReader;
+    protected element?: HTMLElement;
+    protected origin: ORIGIN_TYPE;
+    protected id: string;
+    protected type: OverlayTypeNames;
+    protected isFocus: boolean;
+    protected minWidth: number;
+    protected minHeight: number;
+    private _isFree;
+    get isFree(): boolean;
+    protected isVariableSize: boolean;
+    protected isVariableMove: boolean;
+    protected variableMove?: VariableMove;
+    protected variableSize?: VariableSize;
+    isEmpty: boolean;
+    page: number;
+    protected get elementLeft(): string;
+    protected get elementTop(): string | 0;
+    protected get elementWidth(): string;
+    protected get elementHeight(): string;
+    protected get elementId(): string;
+    protected saveInfo(value: Partial<OverlayPosition>): void;
+    constructor({ isFree, ...props }: OverlayBaseProps);
+    render(): void;
+    create(): void;
+    remove(): void;
+    setFocus(value: boolean): boolean;
+    protected initVariableSize(): void;
+    protected initVariableMove(): void;
+    protected variableSizeConfig(): VariableSizeConfig;
+    protected variableMoveConfig(): VariableMoveConfig;
+    getValue(): OverlayValue | null;
+    abstract setValue(value: unknown): any;
+    protected abstract createContent(): any;
+}

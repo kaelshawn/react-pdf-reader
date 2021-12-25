@@ -1,0 +1,28 @@
+.tool-bar-container {
+  position: relative;
+  .tool-bar-content {
+    display: flex;
+  }
+  button {
+    flex: 1;
+    border: 0;
+    border-right: 1px solid #eee;
+    border-radius: 0;
+  }
+  button:last-child {
+    border-right: 0;
+  }
+  .toolbar-sign-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    align-items: center;
+    width: 100%;
+    background: white;
+    .toolbar-sign-container-note {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+}
